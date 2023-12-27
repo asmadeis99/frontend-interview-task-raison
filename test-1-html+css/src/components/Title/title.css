@@ -1,0 +1,35 @@
+.title-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    color: #0a0a0a;
+    font-weight: 400;
+    text-align: center;
+}
+
+h1 {
+    color: #0a0a0a;
+    margin: 0;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: -1.44px;
+}
+
+@media (max-width: 1280px) {
+    .title-wrapper {
+        color: #404040;
+        font-size: 16px;
+        gap: 16px;
+        line-height: 24px; /* 150% */
+        letter-spacing: -0.176px;
+    }
+
+    h1 {
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 32px; /* 114.286% */
+        letter-spacing: -0.588px;
+    }
+}

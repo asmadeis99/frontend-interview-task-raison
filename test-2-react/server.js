@@ -1,11 +1,10 @@
-import express from 'express'
+import express from 'express';
 
 const sleep = (time = 0) => new Promise((resolve) => setTimeout(resolve, time))
 const port = 4040
 
 const app = express()
-
-app.use(express.json())
+app.use(express.json());
 
 app.get('/', (_, res) => {
     res.write('This is mock server')
