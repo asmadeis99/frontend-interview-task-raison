@@ -25,12 +25,10 @@ export const LoginPage = () => {
         }
     }, [email])
 
-    // Обработчик изменения состояния email
     const handleEmailChange = (value: string) => {
         setEmail(value)
     }
 
-    // Обработчик изменения состояния чекбокса
     const handleCheckboxChange = () => {
         setIsChecked(!isChecked)
     }
@@ -39,7 +37,6 @@ export const LoginPage = () => {
         history.goBack()
     }
 
-    // Обработчик удержания кнопки
     const handleHold = () => {
         isHoldValid = true
         const interval = setInterval(() => {
@@ -47,7 +44,6 @@ export const LoginPage = () => {
             console.log(countdown)
             if (countdown <= 0) {
                 clearInterval(interval)
-                // Перенаправление на следующую страницу после успешного удержания кнопки
                 if (isHoldValid) {
                     history.push('/login/step-2')
                 }
@@ -55,7 +51,6 @@ export const LoginPage = () => {
         }, 100)
     }
 
-    // Обработчик отпускания кнопки
     const handleRelease = () => {
         isHoldValid = false
     }
